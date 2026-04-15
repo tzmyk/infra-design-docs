@@ -32,10 +32,10 @@
 
 | カテゴリ | テストファイル | 参照する設計書 |
 |---|---|---|
-| ネットワーク | `test_network.py` | `01_network/vpc-design.md` |
-| セキュリティ | `test_security.py` | `02_security/security-design.md` |
-| IAM | `test_iam.py` | `03_iam/roles.md` |
-| コンピューティング | `test_compute.py` | `04_compute/compute-design.md` |
+| ネットワーク | `test_network.py` | `docs/01_network/vpc-design.md` |
+| セキュリティ | `test_security.py` | `docs/02_security/security-design.md` |
+| IAM | `test_iam.py` | `docs/03_iam/roles.md` |
+| コンピューティング | `test_compute.py` | `docs/04_compute/compute-design.md` |
 
 ---
 
@@ -71,7 +71,7 @@ AWS_PROFILE=readonly .venv/bin/pytest tests/ -v
 
 ### test_network.py
 
-設計書 `01_network/vpc-design.md` の内容を検証する。
+設計書 `docs/01_network/vpc-design.md` の内容を検証する。
 
 | テストケース | 検証内容 | 設計書の根拠 |
 |---|---|---|
@@ -87,7 +87,7 @@ AWS_PROFILE=readonly .venv/bin/pytest tests/ -v
 
 ### test_security.py
 
-設計書 `02_security/security-design.md` の内容を検証する。
+設計書 `docs/02_security/security-design.md` の内容を検証する。
 
 | テストケース | 検証内容 | 設計書の根拠 |
 |---|---|---|
@@ -100,7 +100,7 @@ AWS_PROFILE=readonly .venv/bin/pytest tests/ -v
 
 ### test_iam.py
 
-設計書 `03_iam/roles.md` の内容を検証する。
+設計書 `docs/03_iam/roles.md` の内容を検証する。
 
 | テストケース | 検証内容 | 設計書の根拠 |
 |---|---|---|
@@ -113,7 +113,7 @@ AWS_PROFILE=readonly .venv/bin/pytest tests/ -v
 
 ### test_compute.py
 
-設計書 `04_compute/compute-design.md` の内容を検証する。
+設計書 `docs/04_compute/compute-design.md` の内容を検証する。
 
 | テストケース | 検証内容 | 設計書の根拠 |
 |---|---|---|
@@ -136,7 +136,7 @@ AWS_PROFILE=readonly .venv/bin/pytest tests/ -v
 ```python
 def test_db_subnet_no_internet_route():
     """
-    [設計書参照] 01_network/vpc-design.md > サブネット一覧
+    [設計書参照] docs/01_network/vpc-design.md > サブネット一覧
     DB サブネットのインターネット経路: なし（完全プライベート）
     """
 ```
